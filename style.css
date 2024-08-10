@@ -1,0 +1,291 @@
+body {
+    font-family: 'Bebas Neue', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000; 
+    color: #0b0a0a; 
+    margin: 0;
+    padding: 20px;
+    background-image: url(pexels-ketut-subiyanto-4132585.jpg);
+   
+}
+
+h1 {
+    color: #531e54; 
+    text-align: center;
+}
+
+.heading {
+    color: #847225;
+    text-align: center;
+}
+
+.input_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.input, .date, .workType {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #333; 
+    color: #fff; 
+    width: 100%;
+    box-sizing:border-box;
+    width: 300px;
+}
+
+.addButton {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #28a745;
+    color: #f5ebeb;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 300px;
+    box-sizing: border-box;
+
+}
+
+.addButton:hover {
+    background-color: #218838;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px; 
+    padding: 0 10px; 
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.margin-top {
+    margin-top: 40px; 
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #ecb8b8; 
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+.column h3 {
+    margin: 0;
+    padding: 5px;
+    background-color: #16f606;
+    color: white;
+    text-align: center;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #f9f6f6;
+    border-radius: 5px;
+    background-color: #ecb8b8; 
+    margin-bottom: 5px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.item_input, .date_span, .workType_span {
+    flex: 1;
+    margin-bottom: 10px;
+    color: #030803; 
+}
+
+.item_input.completed {
+    text-decoration: line-through;
+    color: rgb(83, 5, 5);
+}
+
+button {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.editButton {
+    background-color: #007bff;
+    color: white;
+}
+
+.completedButton {
+    background-color: #ffc107;
+    color: white;
+}
+
+.removeButton {
+    background-color: #dc3545;
+    color: white;
+}
+
+.editButton:hover {
+    background-color: #0056b3;
+}
+
+.completedButton:hover {
+    background-color: #e0a800;
+}
+
+.removeButton:hover {
+    background-color: #c82333;
+}
+
+.message {
+    font-size: 1.2rem;
+    color: #28a745;
+    margin-top: auto;
+    text-align: center;
+}
+
+.sparkle {
+    font-size: 2rem;
+    position: absolute;
+    margin-top: 200px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+#message {
+    position: absolute; 
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    color: #3a09ec;
+    margin-top: 275px;
+}
+
+.hidden {
+    display: none;
+}
+
+.sparkle-fall {
+    position: absolute;
+    animation: sparkle-fall 3s linear forwards;
+}
+
+@keyframes sparkle-fall {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.timer {
+    font-size: 0.8rem;
+    color: #666;
+    margin-left: 10px;
+}
+
+.sparkle {
+    font-size: 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.sparkle-fall {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: sparkle-fall 3s linear forwards;
+}
+
+@keyframes sparkle-fall {
+    0% {
+        transform: translate(-50%, -100%);
+    }
+    100% {
+        transform: translate(-50%, 100vh);
+        opacity: 0;
+    }
+}
+
+.celebratory-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1001;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .heading {
+        font-size: 20px;
+    }
+
+    .input_div {
+        gap: 5px;
+    }
+
+    .input, .date, .workType, .addButton {
+        width: 100%;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .item {
+        font-size: 0.8rem;
+        padding: 8px;
+        width: 100%;
+    }
+
+    .item_input, .date_span, .workType_span {
+        margin-bottom: 3px;
+    }
+
+    .item button {
+        margin-top: 5px; 
+    }
+}

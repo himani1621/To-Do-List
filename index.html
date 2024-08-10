@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1><span class="heading">TO-DO</span> LIST for three days</h1>
+    <div class="input_div">
+        <input type="text" class="input" placeholder="What to do...">
+        <input type="date" class="date">
+        <select class="workType">
+            <option value="work">Work</option>
+            <option value="personal">Personal</option>
+            <option value="other">Other</option>
+        </select>
+        <button class="addButton"><i class="plus">+</i></button>
+    </div>
+
+    <div class="container">
+        <div class="row" id="todayRow">
+            <h2>Today</h2>
+            <div class="column" id="todayWork">Work</div>
+            <div class="column" id="todayPersonal">Personal</div>
+            <div class="column" id="todayOther">Other</div>
+        </div>
+        <div class="row margin-top" id="tomorrowRow">
+            <h2>Tomorrow</h2>
+            <div class="column" id="tomorrowWork">Work</div>
+            <div class="column" id="tomorrowPersonal">Personal</div>
+            <div class="column" id="tomorrowOther">Other</div>
+        </div>
+        <div class="row margin-top" id="dayAfterTomorrowRow">
+            <h2>Day After Tomorrow</h2>
+            <div class="column" id="dayAfterTomorrowWork">Work</div>
+            <div class="column" id="dayAfterTomorrowPersonal">Personal</div>
+            <div class="column" id="dayAfterTomorrowOther">Other</div>
+        </div>
+    </div>
+
+    <div id="message" class="message"></div>
+    <div id="sparkle" class="sparkle hidden"></div>
+    <audio id="celebrationSound" src="c.mp3"></audio>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
